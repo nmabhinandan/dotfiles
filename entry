@@ -1,0 +1,5 @@
+source ./aliases
+
+for f in ./configs*; do
+   . $f
+done

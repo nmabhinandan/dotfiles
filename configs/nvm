@@ -1,0 +1,18 @@
+export NVM_DIR="$HOME/.nvm"
+mkdir -p "$NVM_DIR"
+[ ! -r ~/.nvm/nvm.sh ] || {
+	nvm() {
+	    unfunction "$0"
+	    
+	    [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"    
+	    [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+	    
+	    $0 "$@"
+	}
+
+	node() {
+		unfunction "$0"
+	    nvm use --lts
+		$0 "$@"
+	}
+}

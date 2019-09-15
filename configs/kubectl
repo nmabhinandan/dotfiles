@@ -1,0 +1,6 @@
+kubectl() {
+    unfunction "$0"
+	source <(kubectl completion bash)    
+    
+    $0 "$@"
+}
