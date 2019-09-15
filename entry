@@ -1,5 +1,5 @@
-source ./aliases
+source "$HOME/dotfiles/aliases"
 
-for f in ./configs*; do
+for f in "$HOME/dotfiles/configs"*; do
    . $f
 done
